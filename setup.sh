@@ -28,6 +28,7 @@
 		fi
 	}
 
+        mkdir Kernel
 	mkdir toolchains
 	toolchains_setup gcc64 toolchains/gcc-arm64 https://github.com/mvaisakh/gcc-arm64 gcc-master
 	toolchains_setup gcc32 toolchains/gcc-arm https://github.com/mvaisakh/gcc-arm gcc-master
@@ -49,9 +50,7 @@
 ############################ Setup Scripts #################################
 
 curl -o build.sh https://raw.githubusercontent.com/KazuDante89/builder/main/build.sh
-curl -o telegram-send.conf https://raw.githubusercontent.com/KazuDante89/builder/main/telegram-send.conf
 cp build.sh Kernel/build.sh
-cp telegram-send.conf Kernel/telegram-send.conf
 cd Kernel || exit
 bash build.sh --compiler=clang --device=lisa
 exit 0
