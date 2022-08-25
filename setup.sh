@@ -43,7 +43,7 @@
 
 ############################## Setup Kernel ################################
 
-	gut https://github.com/KazuDante89/KazuDante89/android_kernel_lisa -b sapphire Kernel
+	gut https://github.com/KazuDante89/android_kernel_lisa -b sapphire Kernel
 
 ############################################################################
 
