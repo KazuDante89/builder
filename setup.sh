@@ -48,9 +48,10 @@
 
 ############################ Setup Scripts #################################
 
-  curl -o protonic.sh https://raw.githubusercontent.com/KazuDante89/android_kernel_xiaomi_sm7325/codelinaro/protonic.sh
-  curl -o telegram-send.conf https://raw.githubusercontent.com/KazuDante89/android_kernel_xiaomi_sm7325/codelinaro/telegram-send.conf
-	cp protonic.sh Kernel/protonic.sh
-	cd Kernel || exit
-	bash protonic.sh --compiler=clang --device=lisa
-	exit 0
+curl -o build.sh https://raw.githubusercontent.com/KazuDante89/builder/main/build.sh
+curl -o telegram-send.conf https://raw.githubusercontent.com/KazuDante89/builder/main/telegram-send.conf
+cp build.sh Kernel/build.sh
+cp telegram-send.conf Kernel/telegram-send.conf
+cd Kernel || exit
+bash build.sh --compiler=clang --device=lisa
+exit 0
