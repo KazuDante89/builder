@@ -15,6 +15,7 @@
 	sed -i s/demo1/"${BOT_API_KEY}"/g telegram-send.conf
 	sed -i s/demo2/"${CHAT_ID}"/g telegram-send.conf
 	mkdir "$HOME"/.config
+	curl -o telegram-send.conf https://raw.githubusercontent.com/KazuDante89/builder/main/telegram-send.conf
 	mv telegram-send.conf "$HOME"/.config/telegram-send.conf
 
 ############################################################################
