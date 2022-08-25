@@ -109,10 +109,10 @@ kernel_builder() {
 	# Build Start
 	BUILD_START=$(date +"%s")
 
-	DFCF="vendor/${CODENAME}-${SUFFIX}_defconfig"
+	DFCF="${CODENAME}-_defconfig"
 
 	if [[ $PIXEL_THERMALS == "1" ]]; then
-		./scripts/config --file arch/arm64/configs/vendor/lisa-qgki_defconfig -d MI_THERMAL_CPU_THROTTLE
+		./scripts/config --file arch/arm64/configs/lisa_defconfig -d MI_THERMAL_CPU_THROTTLE
 		THERMAL="Pixel Thermal"
 	else
 		THERMAL="XiaoMi Thermal"
