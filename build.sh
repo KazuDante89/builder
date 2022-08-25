@@ -109,7 +109,7 @@ kernel_builder() {
 	# Build Start
 	BUILD_START=$(date +"%s")
 
-	DFCF="${CODENAME}-_defconfig"
+	DFCF="${CODENAME}_defconfig"
 
 	if [[ $PIXEL_THERMALS == "1" ]]; then
 		./scripts/config --file arch/arm64/configs/lisa_defconfig -d MI_THERMAL_CPU_THROTTLE
