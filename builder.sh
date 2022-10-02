@@ -13,7 +13,7 @@ gut() {
 
 mkdir toolchains
 
-#gut https://github.com/cyberknight777/gcc-arm64.git -b master toolchains/gcc64
+gut https://github.com/cyberknight777/gcc-arm64.git -b master toolchains/gcc64
 gut https://github.com/cyberknight777/gcc-arm.git -b master toolchains/gcc32
 gut https://gitlab.com/dakkshesh07/neutron-clang.git -b Neutron-16 toolchains/clang
 
@@ -33,6 +33,7 @@ gut https://github.com/KazuDante89/xiaomi_lisa_kernel.git -b Lab Kernel
 
 ############################## Setup Scripts ###############################
 
+wget -cO https://raw.githubusercontent.com/KazuDante89/builder/main/lab.sh > lab.sh 
 mv lab.sh Kernel/lab.sh
 cd Kernel
 bash lab.sh clang
